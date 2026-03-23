@@ -1,0 +1,92 @@
+.phase-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 10px;
+}
+
+.phase-bar--player {
+  border-left: 3px solid #4299e1;
+}
+
+.phase-bar--ai {
+  border-left: 3px solid #e53e3e;
+}
+
+.phase-bar__turn-indicator {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a0aec0;
+}
+
+.phase-bar--player .phase-bar__turn-indicator {
+  color: #63b3ed;
+}
+
+.phase-bar--ai .phase-bar__turn-indicator {
+  color: #fc8181;
+}
+
+.phase-bar__phases {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.phase-step {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  color: #4a5568;
+  transition: all 0.2s ease;
+}
+
+.phase-step--active {
+  background: #4299e1;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(66,153,225,0.5);
+}
+
+.phase-bar--ai .phase-step--active {
+  background: #e53e3e;
+  box-shadow: 0 0 8px rgba(229,62,62,0.5);
+}
+
+.phase-step--done {
+  color: #718096;
+  background: rgba(255,255,255,0.03);
+}
+
+.phase-step__label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.phase-bar__advance-btn {
+  align-self: flex-end;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #4299e1;
+  background: transparent;
+  color: #63b3ed;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.phase-bar__advance-btn:hover {
+  background: #4299e1;
+  color: #fff;
+}
+
+.phase-bar__advance-btn:active {
+  transform: scale(0.97);
+}

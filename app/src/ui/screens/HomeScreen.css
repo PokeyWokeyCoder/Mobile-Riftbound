@@ -1,0 +1,211 @@
+/* ─── Home Screen ─────────────────────────────────────────────────────────────── */
+.home-screen {
+  min-height: 100dvh;
+  background: #0d1117;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background orbs */
+.home-screen__bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-screen__orb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.04;
+  filter: blur(60px);
+}
+
+.home-screen__orb:nth-child(1) { top: -60px; left: -60px; }
+.home-screen__orb:nth-child(2) { top: 20%; right: -80px; }
+.home-screen__orb:nth-child(3) { top: 50%; left: 30%; }
+.home-screen__orb:nth-child(4) { bottom: 20%; left: -60px; }
+.home-screen__orb:nth-child(5) { bottom: 10%; right: -40px; }
+.home-screen__orb:nth-child(6) { top: 70%; right: 20%; }
+
+/* Content */
+.home-screen__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ─── Logo ────────────────────────────────────────────────────────────────────── */
+.home-screen__logo {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.home-screen__logo-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #ffd700 0%, #f6ad55 50%, #fc8181 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.home-screen__logo-sub {
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #4a5568;
+  margin-top: 4px;
+}
+
+/* ─── Domains ─────────────────────────────────────────────────────────────────── */
+.home-screen__domains {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.domain-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1.5px solid currentColor;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* ─── Cards ───────────────────────────────────────────────────────────────────── */
+.home-screen__card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-screen__card--rules {
+  background: rgba(255,255,255,0.02);
+}
+
+.home-screen__section-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #718096;
+  font-weight: 700;
+  margin: 0;
+}
+
+.home-screen__description {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ─── Difficulty Buttons ──────────────────────────────────────────────────────── */
+.home-screen__difficulties {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.difficulty-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.difficulty-btn:active {
+  transform: scale(0.98);
+}
+
+.difficulty-btn--easy {
+  border-color: rgba(104,211,145,0.4);
+}
+.difficulty-btn--easy:hover {
+  background: rgba(104,211,145,0.08);
+  border-color: #68d391;
+}
+
+.difficulty-btn--medium {
+  border-color: rgba(246,173,85,0.4);
+}
+.difficulty-btn--medium:hover {
+  background: rgba(246,173,85,0.08);
+  border-color: #f6ad55;
+}
+
+.difficulty-btn--hard {
+  border-color: rgba(229,62,62,0.4);
+}
+.difficulty-btn--hard:hover {
+  background: rgba(229,62,62,0.08);
+  border-color: #e53e3e;
+}
+
+.difficulty-btn__label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.difficulty-btn--easy .difficulty-btn__label { color: #68d391; }
+.difficulty-btn--medium .difficulty-btn__label { color: #f6ad55; }
+.difficulty-btn--hard .difficulty-btn__label { color: #fc8181; }
+
+.difficulty-btn__desc {
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+/* ─── Rules List ──────────────────────────────────────────────────────────────── */
+.rules-list {
+  margin: 0;
+  padding: 0 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rules-list li {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  line-height: 1.4;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────────────────── */
+.home-screen__footer {
+  text-align: center;
+  font-size: 0.65rem;
+  color: #2d3748;
+  letter-spacing: 0.03em;
+}

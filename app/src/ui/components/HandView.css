@@ -1,0 +1,64 @@
+.hand-view {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px 12px 0 0;
+}
+
+.hand-view__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #718096;
+}
+
+.hand-view__count {
+  color: #4a5568;
+  font-weight: 400;
+}
+
+.hand-view__cards {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+  align-items: flex-end;
+}
+
+.hand-view__cards::-webkit-scrollbar {
+  height: 3px;
+}
+
+.hand-view__cards::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.04);
+  border-radius: 2px;
+}
+
+.hand-view__cards::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+}
+
+.hand-view__empty {
+  font-size: 0.75rem;
+  color: #4a5568;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.hand-card-wrapper {
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.hand-card-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+.hand-card-wrapper--selected {
+  transform: translateY(-12px);
+}

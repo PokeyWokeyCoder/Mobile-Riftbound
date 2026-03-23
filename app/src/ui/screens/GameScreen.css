@@ -1,0 +1,324 @@
+/* ─── Game Screen Layout ──────────────────────────────────────────────────────── */
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: #0d1117;
+  color: #e2e8f0;
+  overflow: hidden;
+}
+
+/* ─── Top Bar ─────────────────────────────────────────────────────────────────── */
+.game-screen__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+
+.btn-icon {
+  background: rgba(255,255,255,0.06);
+  border: none;
+  color: #a0aec0;
+  font-size: 1.1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-icon:active {
+  background: rgba(255,255,255,0.12);
+  transform: scale(0.95);
+}
+
+.topbar__score {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topbar__score-value {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffd700;
+}
+
+.topbar__score-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #718096;
+  letter-spacing: 0.06em;
+}
+
+.topbar__score-sep {
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.topbar__turn {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #4a5568;
+  background: rgba(255,255,255,0.05);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+/* ─── Phase Bar ───────────────────────────────────────────────────────────────── */
+.game-screen__phasebar {
+  padding: 8px 12px;
+  flex-shrink: 0;
+}
+
+/* ─── Tabs ────────────────────────────────────────────────────────────────────── */
+.game-screen__tabs {
+  display: flex;
+  padding: 0 12px;
+  gap: 4px;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.tab-btn {
+  padding: 8px 14px;
+  border: none;
+  background: none;
+  color: #4a5568;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tab-btn--active {
+  color: #4299e1;
+  border-bottom-color: #4299e1;
+}
+
+/* ─── Main ────────────────────────────────────────────────────────────────────── */
+.game-screen__main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.game-screen__ai-info,
+.game-screen__player-resources {
+  flex-shrink: 0;
+}
+
+.game-screen__battlefields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.game-screen__log {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-screen__legends {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.legend-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-section__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #718096;
+}
+
+/* ─── Hand ────────────────────────────────────────────────────────────────────── */
+.game-screen__hand {
+  flex-shrink: 0;
+}
+
+/* ─── Toolbar ─────────────────────────────────────────────────────────────────── */
+.game-screen__toolbar {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.45);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.toolbar__selected-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: rgba(66,153,225,0.12);
+  border: 1px solid rgba(66,153,225,0.3);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #90cdf4;
+}
+
+.toolbar__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.toolbar__waiting {
+  font-size: 0.8rem;
+  color: #718096;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+/* ─── Buttons ─────────────────────────────────────────────────────────────────── */
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 44px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--primary {
+  background: #4299e1;
+  color: #fff;
+  border-color: #4299e1;
+}
+
+.btn--primary:hover {
+  background: #3182ce;
+  border-color: #3182ce;
+}
+
+.btn--secondary {
+  background: transparent;
+  color: #f6ad55;
+  border-color: #f6ad55;
+}
+
+.btn--secondary:hover {
+  background: rgba(246,173,85,0.1);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #a0aec0;
+  border-color: rgba(255,255,255,0.15);
+}
+
+.btn--ghost:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.btn-small {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #a0aec0;
+}
+
+/* ─── Game Over ───────────────────────────────────────────────────────────────── */
+.game-screen--over {
+  align-items: center;
+  justify-content: center;
+}
+
+.game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 24px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.game-over__icon {
+  font-size: 4rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 20px currentColor);
+}
+
+.game-over__icon--win { filter: drop-shadow(0 0 20px #ffd700); }
+.game-over__icon--loss { filter: drop-shadow(0 0 20px #e53e3e); }
+
+.game-over__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  color: #e2e8f0;
+}
+
+.game-over__sub {
+  font-size: 1rem;
+  color: #718096;
+  margin: 0;
+}
+
+.game-over__scores {
+  display: flex;
+  gap: 24px;
+}
+
+.score-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  font-size: 0.75rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.score-block__pts {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffd700;
+}
