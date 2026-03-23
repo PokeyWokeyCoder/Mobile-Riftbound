@@ -1,0 +1,51 @@
+.game-log {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  max-height: 180px;
+}
+
+.game-log__title {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4a5568;
+}
+
+.game-log__entries {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.game-log__entries::-webkit-scrollbar {
+  width: 3px;
+}
+
+.game-log__entries::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.04);
+}
+
+.game-log__entries::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 2px;
+}
+
+.game-log__entry {
+  font-size: 0.7rem;
+  color: #718096;
+  line-height: 1.4;
+  padding: 2px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.game-log__entry--latest {
+  color: #a0aec0;
+  font-weight: 500;
+}
